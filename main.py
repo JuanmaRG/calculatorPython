@@ -7,10 +7,15 @@ mainFrame = Frame(root)
 mainFrame.pack()
 root.title("Calculator by Juanma")
 # DISPLAY
-display = Entry(mainFrame)
+numerDisplay = StringVar()
+display = Entry(mainFrame, textvariable=numerDisplay)
 display.grid(row=1, column=1, padx=10, pady=10, columnspan=4)
-display.config(background="black" ,justify ="right")
+display.config(background="black" ,fg="white", justify ="right")
 
+#PUSH BUTTON
+def push_number(num):
+    x = numerDisplay.get()
+    numerDisplay.set(x + str(num) )
 # BUTTONS ON ROW2
 button7 = Button(mainFrame,text="7",width=3)
 button7.grid(row=2,column=1)
@@ -22,11 +27,11 @@ buttonDivide = Button(mainFrame,text="/",width=3)
 buttonDivide.grid(row=2,column=4)
 
 # BUTTONS ON ROW3
-button4 = Button(mainFrame,text="4",width=3)
+button4 = Button(mainFrame,text="4",width=3, command=lambda:push_number(4))
 button4.grid(row=3,column=1)
-button5 = Button(mainFrame,text="5",width=3)
+button5 = Button(mainFrame,text="5",width=3, command=lambda:push_number(5))
 button5.grid(row=3,column=2)
-button6 = Button(mainFrame,text="6",width=3)
+button6 = Button(mainFrame,text="6",width=3, command=lambda:push_number(6))
 button6.grid(row=3,column=3)
 buttonMultiply = Button(mainFrame,text="X",width=3)
 buttonMultiply.grid(row=3,column=4)
