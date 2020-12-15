@@ -31,6 +31,26 @@ button6.grid(row=3,column=3)
 buttonMultiply = Button(mainFrame,text="X",width=3)
 buttonMultiply.grid(row=3,column=4)
 
+# BUTTONS ON ROW4
+button1 = Button(mainFrame,text="1",width=3)
+button1.grid(row=4,column=1)
+button2 = Button(mainFrame,text="2",width=3)
+button2.grid(row=4,column=2)
+button3 = Button(mainFrame,text="3",width=3)
+button3.grid(row=4,column=3)
+buttonMinus = Button(mainFrame,text="-",width=3)
+buttonMinus.grid(row=4,column=4)
+
+# BUTTONS ON ROW5
+button0 = Button(mainFrame,text="1",width=3)
+button0.grid(row=5,column=1)
+buttonComma = Button(mainFrame,text=",",width=3)
+buttonComma.grid(row=5,column=2)
+buttonEqual = Button(mainFrame,text="=",width=3)
+buttonEqual .grid(row=5,column=3)
+buttonADD = Button(mainFrame,text="-",width=3)
+buttonADD.grid(row=5,column=4)
+
 root.mainloop()
 
 
